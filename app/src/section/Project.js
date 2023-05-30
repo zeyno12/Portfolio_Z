@@ -8,7 +8,7 @@ import img2 from "../assets/image/photozey.jpg";
 import img3 from "../assets/image/photozey6.jpg";
 import img4 from "../assets/image/photozey7.jpg";
 const Section = styled.section`
-  min-height: 200vh;
+  min-height: 100vh;
   height: auto;
   width: 100vw;
   margin: 0 auto;
@@ -132,11 +132,14 @@ const Project = () => {
       });
     }, 5000);
 
-    return () => {};
+    return () => {
+      t1.kill();
+      ScrollTrigger.killAll();
+    };
   }, []);
 
   return (
-    <Section>
+    <Section ref={ref} id="project">
       <Title data-scroll data-scroll-speed="-1">
         Projects
       </Title>

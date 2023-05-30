@@ -10,6 +10,8 @@ import About from "./section/About";
 import Project from "./section/Project";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import Banner from "./section/Banner";
+import ShowImgs from "./section/ShowImgs";
+import Footer from "./section/Footer";
 function App() {
   const containerRef = useRef(null);
 
@@ -38,6 +40,8 @@ function App() {
               <About />
               <Project />
               <Banner />
+              <ShowImgs />
+              <Footer />
             </main>
           </AnimatePresence>
         </LocomotiveScrollProvider>
